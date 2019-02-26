@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     @user = User.new(create_params)
     if @user.save
       UserMailer.welcome(@user).deliver
-      session[:user_id] = @user.id
+      cookies[:auth_token] = @user.token
       redirect_to login_path
     else
       render :new

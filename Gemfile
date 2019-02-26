@@ -33,8 +33,6 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  gem 'factory_girl_rails', require: false
-
   gem 'pry'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -53,5 +51,9 @@ group :development do
 end
 
 group :test do
- gem 'rspec-rails'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'database_cleaner'
+  gem 'faker'
+  gem 'shoulda-matchers', '~> 4.0.1'
 end
