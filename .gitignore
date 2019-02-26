@@ -18,3 +18,7 @@
 
 # Ignore config files
 config/database.yml
+
+# Ignore system files
+.DS_Store
+spec/.DS_Store
