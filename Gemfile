@@ -57,3 +57,6 @@ group :test do
   gem 'faker'
   gem 'shoulda-matchers', '~> 4.0.1'
 end
+
+gem 'slim', '~> 4.0.1'
+gem 'slim-rails', '~> 3.2.0'

@@ -1,0 +1,23 @@
+h1
+  | Edit profile
+= form_for @user do |form|
+  = render 'errors', user: @user
+  .field
+    = form.label :name
+    br
+    = form.text_field :name
+  .field
+    = form.label :email
+    br
+    = @user.email
+  .field
+    = form.label :password
+    br
+    = form.password_field :password
+  .field
+    = form.label :password_confirmation
+    br
+    = form.password_field :password_confirmation
+  br
+  = form.submit "Update"
+  = link_to('Back', user_path(@user))
